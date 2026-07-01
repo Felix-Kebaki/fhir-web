@@ -180,6 +180,11 @@ REACT_APP_KEYCLOAK_API_BASE_URL=https://your-keycloak-server/auth/admin/realms/Y
 REACT_APP_FHIR_API_BASE_URL=https://your-fhir-server/fhir
 ```
 
+> **Gateway deployments:** custom (non-FHIR) endpoints such as `LocationHierarchy` and
+> `PractitionerDetail` are served at the gateway root (no `/fhir` prefix). fhir-web derives
+> their base by stripping a trailing `/fhir` from `REACT_APP_FHIR_API_BASE_URL`. If your
+> custom endpoints live at a different base, set `REACT_APP_FHIR_WEB_CUSTOM_ENDPOINT_BASE_URL`.
+
 #### Authentication Settings
 
 ```bash
