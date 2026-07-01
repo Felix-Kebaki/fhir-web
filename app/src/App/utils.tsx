@@ -15,6 +15,7 @@ import {
   COMMODITIES_LIST_RESOURCE_ID,
   DISABLE_TEAM_MEMBER_REASSIGNMENT,
   FHIR_API_BASE_URL,
+  FHIR_WEB_CUSTOM_ENDPOINT_BASE_URL,
   KEYCLOAK_USERS_PAGE_SIZE,
   KEYCLOAK_API_BASE_URL,
 } from '../configs/env';
@@ -22,9 +23,11 @@ import {
 export const BaseProps = {
   baseURL: OPENSRP_API_BASE_URL,
   fhirBaseURL: FHIR_API_BASE_URL,
+  fhirCustomEndpointBaseURL: FHIR_WEB_CUSTOM_ENDPOINT_BASE_URL,
 };
 
 export const teamAffiliationProps = {
+  ...BaseProps,
   fhirRootLocationId: FHIR_ROOT_LOCATION_ID,
 };
 
@@ -35,6 +38,7 @@ export const teamManagementProps = {
 };
 
 export const locationUnitProps = {
+  ...BaseProps,
   fhirRootLocationId: FHIR_ROOT_LOCATION_ID,
 };
 
@@ -49,6 +53,11 @@ export const editLocationProps = {
 
 export const usersListProps = {
   usersPageSize: KEYCLOAK_USERS_PAGE_SIZE,
+};
+
+export const userDetailsProps = {
+  ...BaseProps,
+  keycloakBaseURL: KEYCLOAK_API_BASE_URL,
 };
 export const inventoryServiceProps = {
   baseURL: OPENSRP_API_BASE_URL,

@@ -32,6 +32,7 @@ import {
   COMMODITIES_LIST_RESOURCE_ID,
   DISABLE_TEAM_MEMBER_REASSIGNMENT,
   FHIR_API_BASE_URL,
+  FHIR_WEB_CUSTOM_ENDPOINT_BASE_URL,
   KEYCLOAK_USERS_PAGE_SIZE,
   KEYCLOAK_API_BASE_URL,
 } from '../../configs/env';
@@ -53,8 +54,14 @@ describe('App utils', () => {
       expect(BaseProps.fhirBaseURL).toBe(FHIR_API_BASE_URL);
     });
 
+    it('should contain fhirCustomEndpointBaseURL from environment', () => {
+      expect(BaseProps.fhirCustomEndpointBaseURL).toBe(FHIR_WEB_CUSTOM_ENDPOINT_BASE_URL);
+    });
+
     it('should be an object with correct keys', () => {
-      expect(Object.keys(BaseProps).sort()).toEqual(['baseURL', 'fhirBaseURL'].sort());
+      expect(Object.keys(BaseProps).sort()).toEqual(
+        ['baseURL', 'fhirBaseURL', 'fhirCustomEndpointBaseURL'].sort()
+      );
     });
   });
 
