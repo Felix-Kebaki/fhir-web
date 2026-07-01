@@ -95,7 +95,7 @@ test('renders correctly for new locations', async () => {
   const cancelUrlGenerator = '/cancelled';
 
   nock(props.fhirBaseURL)
-    .get(`/${locationHierarchyResourceType}/_search`)
+    .get(`/${locationHierarchyResourceType}`)
     .query({ _id: props.fhirRootLocationId })
     .reply(200, fhirHierarchy);
 
@@ -123,7 +123,7 @@ test('renders correctly for edit locations', async () => {
   history.push(`/add/${createdLocation1.partOf.identifier}?parentId=Location/303`);
 
   nock(props.fhirBaseURL)
-    .get(`/${locationHierarchyResourceType}/_search`)
+    .get(`/${locationHierarchyResourceType}`)
     .query({ _id: props.fhirRootLocationId })
     .reply(200, fhirHierarchy);
 
@@ -152,7 +152,7 @@ test('#1277 - works ok for new locations', async () => {
   const notificationErrorMock = jest.spyOn(notifications, 'sendErrorNotification');
 
   nock(props.fhirBaseURL)
-    .get(`/${locationHierarchyResourceType}/_search`)
+    .get(`/${locationHierarchyResourceType}`)
     .query({ _id: props.fhirRootLocationId })
     .reply(200, fhirHierarchy);
 
@@ -216,7 +216,7 @@ test('data loading problem', async () => {
   history.push('/add');
 
   nock(props.fhirBaseURL)
-    .get(`/${locationHierarchyResourceType}/_search`)
+    .get(`/${locationHierarchyResourceType}`)
     .query({ _id: props.fhirRootLocationId })
     .replyWithError('something aweful happened');
 
@@ -241,7 +241,7 @@ test('data loading but undefined', async () => {
   history.push('/add');
 
   nock(props.fhirBaseURL)
-    .get(`/${locationHierarchyResourceType}/_search`)
+    .get(`/${locationHierarchyResourceType}`)
     .query({ _id: props.fhirRootLocationId })
     .reply(200, null);
 
