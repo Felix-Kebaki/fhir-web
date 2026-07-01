@@ -103,3 +103,23 @@ export function dateToLocaleString(stringDate?: string | Date, dateOnly = false)
 
   return toDateObj.toLocaleString();
 }
+
+/**
+ * Resolve the base URL for custom (non-FHIR) gateway endpoints such as
+ * LocationHierarchy and PractitionerDetail.
+ *
+ * These endpoints are served at the gateway root (e.g. `{gateway}/LocationHierarchy`),
+ * NOT under the FHIR base path (e.g. `{gateway}/fhir/...`). This derives that root by
+ * stripping a single trailing `/fhir` segment from the FHIR base URL, unless an
+ * explicit override is supplied.
+ *
+ * @param fhirBaseURL - the FHIR API base URL (typically ends in `/fhir`)
+ * @param override - optional explicit custom-endpoint base URL; takes precedence when set
+ * @returns the base URL to use for custom-endpoint requests
+ */
+export const getFhirCustomEndpointBaseURL = (fhirBaseURL?: string, override?: string): string => {
+  if (override) {
+    return override;
+  }
+  return (fhirBaseURL ?? '').replace(/\/fhir\/?$/, '');
+};
