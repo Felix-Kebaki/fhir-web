@@ -88,7 +88,7 @@ describe('LocationForm', () => {
     document.body.appendChild(div);
 
     nock(formProps.fhirBaseURL)
-      .get(`/${locationHierarchyResourceType}/_search`)
+      .get(`/${locationHierarchyResourceType}`)
       .query({ _id: formProps.fhirRootLocationId })
       .reply(200, fhirHierarchy)
       .persist();
@@ -145,7 +145,7 @@ describe('LocationForm', () => {
     document.body.appendChild(div);
 
     nock(formProps.fhirBaseURL)
-      .get(`/${locationHierarchyResourceType}/_search`)
+      .get(`/${locationHierarchyResourceType}`)
       .query({ _id: formProps.fhirRootLocationId })
       .reply(200, fhirHierarchy)
       .persist();
@@ -378,7 +378,7 @@ describe('LocationForm', () => {
     document.body.appendChild(container);
 
     nock(formProps.fhirBaseURL)
-      .get(`/${locationHierarchyResourceType}/_search`)
+      .get(`/${locationHierarchyResourceType}`)
       .query({ _id: formProps.fhirRootLocationId })
       .reply(200, fhirHierarchy)
 
@@ -412,7 +412,7 @@ describe('LocationForm', () => {
     const notificationSuccessMock = jest.spyOn(notifications, 'sendSuccessNotification');
 
     nock(formProps.fhirBaseURL)
-      .get(`/${locationHierarchyResourceType}/_search`)
+      .get(`/${locationHierarchyResourceType}`)
       .query({ _id: formProps.fhirRootLocationId })
       .reply(200, fhirHierarchy)
       .put(`/Location/${createdLocation2.id}`, createdLocation2 as unknown as RequestBodyMatcher)

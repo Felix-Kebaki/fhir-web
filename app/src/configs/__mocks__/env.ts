@@ -49,3 +49,5 @@ export const BACKEND_ACTIVE = false;
 export const ENABLE_FHIR_USER_MANAGEMENT = true;
 
 export const COMMODITIES_LIST_RESOURCE_ID = 'ad';
+
+export const FHIR_WEB_CUSTOM_ENDPOINT_BASE_URL = 'https://test.smartregister.org';

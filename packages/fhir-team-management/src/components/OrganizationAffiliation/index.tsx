@@ -22,10 +22,11 @@ reducerRegistry.register(reducerName, reducer);
 interface LocationUnitListProps {
   fhirBaseURL: string;
   fhirRootLocationId: string;
+  fhirCustomEndpointBaseURL?: string;
 }
 
 export const AffiliationList: React.FC<LocationUnitListProps> = (props: LocationUnitListProps) => {
-  const { fhirBaseURL, fhirRootLocationId } = props;
+  const { fhirBaseURL, fhirRootLocationId, fhirCustomEndpointBaseURL } = props;
   const selectedNode = useSelector((state) => getSelectedNode(state));
   const dispatch = useDispatch();
   const { t } = useTranslation();
@@ -36,7 +37,7 @@ export const AffiliationList: React.FC<LocationUnitListProps> = (props: Location
     data: treeData,
     isLoading: treeIsLoading,
     error: treeError,
-  } = useGetLocationHierarchy(fhirBaseURL, fhirRootLocationId);
+  } = useGetLocationHierarchy(fhirBaseURL, fhirRootLocationId, {}, fhirCustomEndpointBaseURL);
 
   if (treeIsLoading) {
     return <Spin size="large" className="custom-spinner" />;

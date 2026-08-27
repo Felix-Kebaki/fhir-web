@@ -31,9 +31,10 @@ jest.mock('fhirclient', () => {
   return jest.requireActual('fhirclient/lib/entry/browser');
 });
 
+const fhirGatewayBaseURL = 'http://test.server.org';
 const props = {
   fhirRootLocationId: 'eff94f33-c356-4634-8795-d52340706ba9',
-  fhirBaseURL: 'http://test.server.org',
+  fhirBaseURL: `${fhirGatewayBaseURL}/fhir`,
 };
 
 jest.mock('@opensrp/notifications', () => ({
@@ -91,16 +92,16 @@ describe('location-management/src/components/LocationUnitList', () => {
   });
 
   it('shows broken page', async () => {
-    nock(props.fhirBaseURL)
-      .get(`/${locationHierarchyResourceType}/_search`)
+    nock(fhirGatewayBaseURL)
+      .get(`/${locationHierarchyResourceType}`)
       .query({ _id: props.fhirRootLocationId })
       .replyWithError({
         message: 'something awful happened',
         code: 'AWFUL_ERROR',
       });
 
-    nock(props.fhirBaseURL)
-      .get(`/${locationHierarchyResourceType}/_search`)
+    nock(fhirGatewayBaseURL)
+      .get(`/${locationHierarchyResourceType}`)
       .query({ _id: 'missing' })
       .reply(200, {});
 
@@ -121,8 +122,8 @@ describe('location-management/src/components/LocationUnitList', () => {
   });
 
   it('works correctly', async () => {
-    nock(props.fhirBaseURL)
-      .get(`/${locationHierarchyResourceType}/_search`)
+    nock(fhirGatewayBaseURL)
+      .get(`/${locationHierarchyResourceType}`)
       .query({ _id: props.fhirRootLocationId })
       .reply(200, fhirHierarchy)
       .persist();
@@ -193,8 +194,8 @@ describe('location-management/src/components/LocationUnitList', () => {
   });
 
   it('Passes selected node as the parent location when adding location clicked', async () => {
-    nock(props.fhirBaseURL)
-      .get(`/${locationHierarchyResourceType}/_search`)
+    nock(fhirGatewayBaseURL)
+      .get(`/${locationHierarchyResourceType}`)
       .query({ _id: props.fhirRootLocationId })
       .reply(200, fhirHierarchy)
       .persist();
@@ -224,8 +225,8 @@ describe('location-management/src/components/LocationUnitList', () => {
   it('Root location wizard works correclty', async () => {
     const notificationSuccessMock = jest.spyOn(notifications, 'sendSuccessNotification');
 
-    nock(props.fhirBaseURL)
-      .get(`/${locationHierarchyResourceType}/_search`)
+    nock(fhirGatewayBaseURL)
+      .get(`/${locationHierarchyResourceType}`)
       .query({ _id: props.fhirRootLocationId })
       .reply(404, {
         resourceType: 'OperationOutcome',

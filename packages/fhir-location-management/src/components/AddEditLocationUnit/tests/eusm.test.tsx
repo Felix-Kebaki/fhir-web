@@ -103,7 +103,7 @@ test('works ok for new locations', async () => {
   const notificationErrorMock = jest.spyOn(notifications, 'sendErrorNotification');
 
   const preFetchScope = nock(props.fhirBaseURL)
-    .get(`/${locationHierarchyResourceType}/_search`)
+    .get(`/${locationHierarchyResourceType}`)
     .query({ _id: props.fhirRootLocationId })
     .reply(200, fhirHierarchy)
     .get(`/${valueSetResourceType}/$expand?url=${eusmServicePointValueSetURI}`)
@@ -185,7 +185,7 @@ test('editing works correctly', async () => {
   nock(props.fhirBaseURL)
     .get(`/${locationResourceType}/${createdLoc.id}`)
     .reply(200, createdLoc)
-    .get(`/${locationHierarchyResourceType}/_search`)
+    .get(`/${locationHierarchyResourceType}`)
     .query({ _id: props.fhirRootLocationId })
     .reply(200, fhirHierarchy)
     .get(`/${valueSetResourceType}/$expand?url=${eusmServicePointValueSetURI}`)
@@ -238,7 +238,7 @@ test('Back search param works correctly', async () => {
   nock(props.fhirBaseURL)
     .get(`/${locationResourceType}/${createdLoc.id}`)
     .reply(200, createdLoc)
-    .get(`/${locationHierarchyResourceType}/_search`)
+    .get(`/${locationHierarchyResourceType}`)
     .query({ _id: props.fhirRootLocationId })
     .reply(200, fhirHierarchy)
     .get(`/${valueSetResourceType}/$expand?url=${eusmServicePointValueSetURI}`)

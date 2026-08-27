@@ -5,7 +5,7 @@ import TreeModel from 'tree-model';
 import { IBundle } from '@smile-cdr/fhirts/dist/FHIR-R4/interfaces/IBundle';
 import { Resource } from '@smile-cdr/fhirts/dist/FHIR-R4/classes/resource';
 import { UseQueryOptions, useQuery } from 'react-query';
-import { FHIRServiceClass } from '@opensrp/react-utils';
+import { FHIRServiceClass, getFhirCustomEndpointBaseURL } from '@opensrp/react-utils';
 import { locationHierarchyResourceType, locationResourceType } from '../constants';
 import { ILocation } from '@smile-cdr/fhirts/dist/FHIR-R4/interfaces/ILocation';
 import { HTTPError } from '@opensrp/server-service';
@@ -73,24 +73,33 @@ export const serializeTree = (trees?: TreeNode[] | TreeNode) => {
 /**
  * get the location hierarchy of location with given identifier
  *
- * @param baseUrl - the server base url
+ * @param baseUrl - the FHIR server base url (typically ends in `/fhir`)
  * @param rootId - the location identifier
  * @param queryOptions - extra query options.
+ * @param customEndpointBaseURL - optional explicit base for custom endpoints; when omitted it
+ *   is derived from baseUrl by stripping a trailing `/fhir`
  */
 export const useGetLocationHierarchy = (
   baseUrl: string,
   rootId: string,
-  queryOptions: UseQueryOptions<IBundle, HTTPError, TreeNode> = {}
+  queryOptions: UseQueryOptions<IBundle, HTTPError, TreeNode> = {},
+  customEndpointBaseURL?: string
 ) => {
-  const hierarchyParams = {
-    _id: rootId,
-  };
+  const customBaseUrl = getFhirCustomEndpointBaseURL(baseUrl, customEndpointBaseURL);
+  const searchParams = new URLSearchParams();
+  if (rootId) {
+    searchParams.append('_id', rootId);
+  }
+  const query = searchParams.toString();
+  const requestUrl = query
+    ? `${locationHierarchyResourceType}?${query}`
+    : locationHierarchyResourceType;
   return useQuery<IBundle, HTTPError, TreeNode>(
-    [locationHierarchyResourceType, hierarchyParams],
+    [locationHierarchyResourceType, customBaseUrl, rootId],
     async () => {
-      return new FHIRServiceClass<IBundle>(baseUrl, locationHierarchyResourceType).list(
-        hierarchyParams
-      );
+      const service = new FHIRServiceClass<IBundle>(customBaseUrl, locationHierarchyResourceType);
+      const res = await service.customRequest({ method: 'GET', url: requestUrl });
+      return res as unknown as IBundle;
     },
     {
       select: (res: IBundle) => {

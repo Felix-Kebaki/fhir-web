@@ -17,6 +17,7 @@ keys = [
     "/react/app/opensrp/client/id",
     "/react/app/opensrp/logout/url",
     "/react/app/fhir/api/base/url",
+    "/react/app/fhir/web/custom/endpoint/base/url",
     "/react/app/opensrp/user/url",
     "/react/app/website/name",
     "/react/app/action/uuid/namespace",

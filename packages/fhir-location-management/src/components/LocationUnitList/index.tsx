@@ -29,6 +29,7 @@ reducerRegistry.register(reducerName, reducer);
 interface LocationUnitListProps {
   fhirBaseURL: string;
   fhirRootLocationId: string; // This is the location.id field.
+  fhirCustomEndpointBaseURL?: string;
 }
 
 export interface AntTreeData {
@@ -62,7 +63,7 @@ export function parseTableData(hierarchy: TreeNode[]) {
 }
 
 export const LocationUnitList: React.FC<LocationUnitListProps> = (props: LocationUnitListProps) => {
-  const { fhirBaseURL, fhirRootLocationId } = props;
+  const { fhirBaseURL, fhirRootLocationId, fhirCustomEndpointBaseURL } = props;
   const selectedNode = useSelector((state) => getSelectedNode(state));
   const dispatch = useDispatch();
   const { t } = useMls();
@@ -76,14 +77,19 @@ export const LocationUnitList: React.FC<LocationUnitListProps> = (props: Locatio
     isLoading: treeIsLoading,
     error: treeError,
     isFetching: treeIsFetching,
-  } = useGetLocationHierarchy(fhirBaseURL, fhirRootLocationId, {
-    enabled: !showWizard,
-    onError: (error) => {
-      if (error.statusCode === 404) {
-        setShowWizard(true);
-      }
+  } = useGetLocationHierarchy(
+    fhirBaseURL,
+    fhirRootLocationId,
+    {
+      enabled: !showWizard,
+      onError: (error) => {
+        if (error.statusCode === 404) {
+          setShowWizard(true);
+        }
+      },
     },
-  });
+    fhirCustomEndpointBaseURL
+  );
 
   if (treeIsLoading) {
     return <Spin size="large" className="custom-spinner" />;

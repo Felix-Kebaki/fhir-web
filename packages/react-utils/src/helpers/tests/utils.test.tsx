@@ -1,7 +1,7 @@
 import { dateToLocaleString, getResourcesFromBundle } from '../utils';
 import { careTeams } from './fixtures';
 import { IBundle } from '@smile-cdr/fhirts/dist/FHIR-R4/interfaces/IBundle';
-import { downloadFile, getFileNameFromCDHHeader } from '../utils';
+import { downloadFile, getFileNameFromCDHHeader, getFhirCustomEndpointBaseURL } from '../utils';
 
 jest.mock('@opensrp/pkg-config', () => ({
   __esModule: true,
@@ -75,5 +75,36 @@ describe('helpers/utils/dateToLocaleString', () => {
     expect(dateToLocaleString('2021-03-10T13:27:48.632+00:00')).toEqual('3/10/2021, 1:27:48 PM');
     expect(dateToLocaleString('2021-03-10T13:27:48.632+00:00', true)).toEqual('3/10/2021');
     expect(dateToLocaleString('1988-08-04')).toEqual('8/4/1988, 12:00:00 AM');
+  });
+});
+
+describe('helpers/utils/getFhirCustomEndpointBaseURL', () => {
+  it('strips a trailing /fhir segment', () => {
+    expect(getFhirCustomEndpointBaseURL('https://host/fhir')).toEqual('https://host');
+  });
+
+  it('strips a trailing /fhir/ segment with trailing slash', () => {
+    expect(getFhirCustomEndpointBaseURL('https://host/fhir/')).toEqual('https://host');
+  });
+
+  it('strips /fhir while preserving a preceding path', () => {
+    expect(getFhirCustomEndpointBaseURL('https://host/base/fhir')).toEqual('https://host/base');
+    expect(getFhirCustomEndpointBaseURL('https://host/base/fhir/')).toEqual('https://host/base');
+  });
+
+  it('leaves a base URL without a trailing /fhir untouched', () => {
+    expect(getFhirCustomEndpointBaseURL('https://host')).toEqual('https://host');
+    expect(getFhirCustomEndpointBaseURL('https://host/myfhir')).toEqual('https://host/myfhir');
+  });
+
+  it('returns the override verbatim when supplied', () => {
+    expect(
+      getFhirCustomEndpointBaseURL('https://host/fhir', 'https://gateway.example.com')
+    ).toEqual('https://gateway.example.com');
+  });
+
+  it('handles an empty or undefined base URL', () => {
+    expect(getFhirCustomEndpointBaseURL()).toEqual('');
+    expect(getFhirCustomEndpointBaseURL('')).toEqual('');
   });
 });

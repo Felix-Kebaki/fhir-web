@@ -97,6 +97,7 @@ import {
   newLocationUnitProps,
   locationUnitProps,
   usersListProps,
+  userDetailsProps,
   teamManagementProps,
   patientProps,
   fhirCreateEditUserProps,
@@ -306,6 +307,7 @@ const FHIRApps = () => {
         disableLoginProtection={DISABLE_LOGIN_PROTECTION}
         exact
         path={`${USER_DETAILS_URL}/:id`}
+        {...userDetailsProps}
         permissions={['iam_user.read']}
         component={UserDetailsV2}
       />

@@ -112,7 +112,7 @@ test('Edits organization affiliation correctly', async () => {
   history.push('/assignments');
 
   nock(props.fhirBaseURL)
-    .get(`/${locationHierarchyResourceType}/_search`)
+    .get(`/${locationHierarchyResourceType}`)
     .query({ _id: props.fhirRootLocationId })
     .reply(200, fhirHierarchy);
 
@@ -283,7 +283,7 @@ test('api error response', async () => {
   history.push('/assignments');
 
   nock(props.fhirBaseURL)
-    .get(`/${locationHierarchyResourceType}/_search`)
+    .get(`/${locationHierarchyResourceType}`)
     .query({ _id: props.fhirRootLocationId })
     .replyWithError('Something awful happened');
 
@@ -311,7 +311,7 @@ test('api undefined response', async () => {
   };
 
   nock(props.fhirBaseURL)
-    .get(`/${locationHierarchyResourceType}/_search`)
+    .get(`/${locationHierarchyResourceType}`)
     .query({ _id: thisProps.fhirRootLocationId })
     .reply(404, {
       resourceType: 'OperationOutcome',

@@ -57,8 +57,9 @@ const queryClient = new QueryClient({
   },
 });
 
+const fhirGatewayBaseURL = 'http://test.server.org';
 const props = {
-  fhirBaseURL: 'http://test.server.org',
+  fhirBaseURL: `${fhirGatewayBaseURL}/fhir`,
   keycloakBaseURL: 'http://test-keycloak.server.org',
 };
 
@@ -123,8 +124,8 @@ test('Renders without crashing', async () => {
       return;
     });
 
-  nock(props.fhirBaseURL)
-    .get(`/${practitionerDetailsResourceType}/_search`)
+  nock(fhirGatewayBaseURL)
+    .get(`/${practitionerDetailsResourceType}`)
     .query({ 'keycloak-uuid': userId })
     .reply(200, practitionerDetailsBundle);
 
@@ -282,8 +283,8 @@ test('Edit button works correctly', async () => {
     return;
   });
 
-  nock(props.fhirBaseURL)
-    .get(`/${practitionerDetailsResourceType}/_search`)
+  nock(fhirGatewayBaseURL)
+    .get(`/${practitionerDetailsResourceType}`)
     .query({ 'keycloak-uuid': userId })
     .reply(200, practitionerDetailsBundle);
 
@@ -320,8 +321,8 @@ test('Renders extra user fields correctly', async () => {
       return;
     });
 
-  nock(props.fhirBaseURL)
-    .get(`/${practitionerDetailsResourceType}/_search`)
+  nock(fhirGatewayBaseURL)
+    .get(`/${practitionerDetailsResourceType}`)
     .query({ 'keycloak-uuid': userId })
     .reply(200, practitionerDetailsBundle);
 

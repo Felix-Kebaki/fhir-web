@@ -146,6 +146,9 @@ We use different technologies to deploy fhir-web. This documentation will focus 
 
       // fhir-server
       REACT_APP_FHIR_API_BASE_URL: '<fhir-server-base-url>/fhir',
+      // Optional: base for custom (non-FHIR) gateway endpoints (LocationHierarchy, PractitionerDetail),
+      // served at the gateway root. Defaults to REACT_APP_FHIR_API_BASE_URL with a trailing /fhir stripped.
+      // REACT_APP_FHIR_WEB_CUSTOM_ENDPOINT_BASE_URL: '<gateway-root-base-url>',
 
       // UUID's
       REACT_APP_FHIR_ROOT_LOCATION_ID: '<id-of-the-root-location-on-the-HAPI-server>',

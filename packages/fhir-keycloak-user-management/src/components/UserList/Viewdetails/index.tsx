@@ -10,6 +10,7 @@ import {
   Resource404,
   ResourceDetails,
   RichPageHeaderProps,
+  getFhirCustomEndpointBaseURL,
   getResourcesFromBundle,
   isValidDate,
 } from '@opensrp/react-utils';
@@ -39,10 +40,15 @@ import { PractitionerDetail } from './types';
 interface UserDetailProps {
   fhirBaseURL: string;
   keycloakBaseURL: string;
+  fhirCustomEndpointBaseURL?: string;
 }
 
 export const UserDetails = (props: UserDetailProps) => {
-  const { keycloakBaseURL: keycloakBaseUrl, fhirBaseURL: fhirBaseUrl } = props;
+  const {
+    keycloakBaseURL: keycloakBaseUrl,
+    fhirBaseURL: fhirBaseUrl,
+    fhirCustomEndpointBaseURL,
+  } = props;
   const params = useParams<{ id: string }>();
   const { id: resourceId } = params;
   const { t } = useTranslation();
@@ -67,16 +73,22 @@ export const UserDetails = (props: UserDetailProps) => {
     'keycloak-uuid': resourceId,
   };
 
+  const customBaseUrl = getFhirCustomEndpointBaseURL(fhirBaseUrl, fhirCustomEndpointBaseURL);
+  const detailsRequestUrl = `${practitionerDetailsResourceType}?${new URLSearchParams(
+    extraQueryFilters
+  ).toString()}`;
+
   const {
     data: practitionerDetails,
     isLoading: detailsLoading,
     error: detailsError,
   } = useQuery<IBundle, Error, PractitionerDetail>(
-    [practitionerDetailsResourceType, resourceId],
-    () =>
-      new FHIRServiceClass<IBundle>(fhirBaseUrl, practitionerDetailsResourceType).list(
-        extraQueryFilters
-      ),
+    [practitionerDetailsResourceType, customBaseUrl, resourceId],
+    async () => {
+      const service = new FHIRServiceClass<IBundle>(customBaseUrl, practitionerDetailsResourceType);
+      const res = await service.customRequest({ method: 'GET', url: detailsRequestUrl });
+      return res as unknown as IBundle;
+    },
     {
       select: (res) => {
         // invariant : expect practitioner-details will always ever be a single record per keycloak user.

@@ -127,6 +127,16 @@ export const FHIR_API_BASE_URL = setEnv(
   'https://fhir-auth.labs.smartregister.org/fhir'
 );
 
+// Base URL for custom (non-FHIR) gateway endpoints such as LocationHierarchy and
+// PractitionerDetail, which are served at the gateway root (no `/fhir` prefix).
+// Defaults to FHIR_API_BASE_URL with a trailing `/fhir` stripped. The strip is inlined
+// here (rather than importing `getFhirCustomEndpointBaseURL` from @opensrp/react-utils)
+// to keep this bootstrap-time module free of the react-utils dependency graph.
+export const FHIR_WEB_CUSTOM_ENDPOINT_BASE_URL = setEnv(
+  'REACT_APP_FHIR_WEB_CUSTOM_ENDPOINT_BASE_URL',
+  FHIR_API_BASE_URL.replace(/\/fhir\/?$/, '')
+);
+
 export const ENABLE_TEAMS_ASSIGNMENT_MODULE =
   setEnv('REACT_APP_ENABLE_TEAMS_ASSIGNMENT_MODULE', 'false') === 'true';
 

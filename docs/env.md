@@ -134,6 +134,12 @@ Below is a list of currently supported environment variables:
   - **Required**
   - default: `https://fhir.labs.smartregister.org/fhir`
 
+- **REACT_APP_FHIR_WEB_CUSTOM_ENDPOINT_BASE_URL**
+
+  - Base URL for custom (non-FHIR) gateway endpoints such as `LocationHierarchy` and `PractitionerDetail`. These are served at the gateway root (no `/fhir` prefix), unlike FHIR resources.
+  - **Optional**
+  - default: `REACT_APP_FHIR_API_BASE_URL` with a trailing `/fhir` stripped. Set this explicitly only if the custom endpoints are hosted at a different base (e.g. a legacy HAPI server that still exposes them under `/fhir`).
+
 - **REACT_APP_ENABLE_FHIR_USER_MANAGEMENT**
 
   - Enable fhir in the user management module
@@ -191,6 +197,12 @@ Below is a list of currently supported environment variables:
   - FHIR server base URL
   - **Required**
   - default: `https://fhir.labs.smartregister.org/fhir`
+
+- **REACT_APP_FHIR_WEB_CUSTOM_ENDPOINT_BASE_URL**
+
+  - Base URL for custom (non-FHIR) gateway endpoints such as `LocationHierarchy` and `PractitionerDetail`. These are served at the gateway root (no `/fhir` prefix), unlike FHIR resources.
+  - **Optional**
+  - default: `REACT_APP_FHIR_API_BASE_URL` with a trailing `/fhir` stripped. Set this explicitly only if the custom endpoints are hosted at a different base.
 
 - **REACT_APP_USER_FORM_RENDER_FIELDS** `partially-implemented`
 
