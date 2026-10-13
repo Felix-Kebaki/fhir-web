@@ -1,0 +1,10 @@
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-resources/dist/types/QuestionnaireResponse/questionResponse.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-resources/dist/types/mls.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-resources/dist/types/Questionnaire/details.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-resources/dist/types/Questionnaire/itemsPreview.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-resources/dist/types/Questionnaire/Questionnaire.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-resources/dist/types/index.d.ts
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+Successfully compiled 6 files with Babel (1913ms).

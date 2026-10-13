@@ -1,0 +1,8 @@
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/opensrp-store/dist/types/store/store.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/opensrp-store/dist/types/store/selectors.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/opensrp-store/dist/types/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/opensrp-store/dist/types/store/ducks/index.d.ts
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+Successfully compiled 4 files with Babel (885ms).

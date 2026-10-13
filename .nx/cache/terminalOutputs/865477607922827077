@@ -1,0 +1,30 @@
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/constants.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/types.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/mls.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/components/BaseComponents/GroupDetail/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/components/BaseComponents/BaseGroupsListView/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/components/GroupList/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/components/ProductForm/types.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/components/ProductForm/utils.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/components/ProductForm/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/helpers/utils.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/components/CommodityAddEdit/Eusm/utils.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/components/CommodityAddEdit/Eusm/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/components/CommodityAddEdit/Default/utils.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/components/CommodityAddEdit/Default/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/components/CommodityAddEdit/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/components/CommodityList/Eusm/ViewDetails.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/components/CommodityList/Eusm/GroupGridFilterRow.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/components/BaseComponents/BaseGroupsListView/ClientSideActionsGrid.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/components/CommodityList/Eusm/List.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/components/CommodityList/Default/List.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/components/CommodityList/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/components/LocationInventory/types.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/components/LocationInventory/utils.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/components/LocationInventory/form.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/components/LocationInventory/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-group-management/dist/types/index.d.ts
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+Successfully compiled 26 files with Babel (4960ms).

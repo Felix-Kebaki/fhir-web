@@ -1,0 +1,318 @@
+{
+  "run": {
+    "command": "cli run build --include-dependencies --stream --no-private",
+    "startTime": "2026-10-13T05:10:40.565Z",
+    "endTime": "2026-10-13T05:10:46.966Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "@opensrp/pkg-config:build",
+      "target": "build",
+      "projectName": "@opensrp/pkg-config",
+      "hash": "2700659237787438001",
+      "startTime": "2026-10-13T05:10:40.581Z",
+      "endTime": "2026-10-13T05:10:40.593Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/notifications:build",
+      "target": "build",
+      "projectName": "@opensrp/notifications",
+      "hash": "13231921840486893698",
+      "startTime": "2026-10-13T05:10:40.581Z",
+      "endTime": "2026-10-13T05:10:40.594Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/store:build",
+      "target": "build",
+      "projectName": "@opensrp/store",
+      "hash": "16896391055379073970",
+      "startTime": "2026-10-13T05:10:40.581Z",
+      "endTime": "2026-10-13T05:10:40.594Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/server-service:build",
+      "target": "build",
+      "projectName": "@opensrp/server-service",
+      "hash": "2100105499421166414",
+      "startTime": "2026-10-13T05:10:40.581Z",
+      "endTime": "2026-10-13T05:10:40.595Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/fhir-helpers:build",
+      "target": "build",
+      "projectName": "@opensrp/fhir-helpers",
+      "hash": "14684829116856591157",
+      "startTime": "2026-10-13T05:10:40.581Z",
+      "endTime": "2026-10-13T05:10:40.595Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/reducer-factory:build",
+      "target": "build",
+      "projectName": "@opensrp/reducer-factory",
+      "hash": "16395582088475137192",
+      "startTime": "2026-10-13T05:10:40.581Z",
+      "endTime": "2026-10-13T05:10:40.596Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/template:build",
+      "target": "build",
+      "projectName": "@opensrp/template",
+      "hash": "1854439083511285226",
+      "startTime": "2026-10-13T05:10:40.581Z",
+      "endTime": "2026-10-13T05:10:40.596Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/i18n:build",
+      "target": "build",
+      "projectName": "@opensrp/i18n",
+      "hash": "8179654368189614520",
+      "startTime": "2026-10-13T05:10:40.597Z",
+      "endTime": "2026-10-13T05:10:40.604Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/server-logout:build",
+      "target": "build",
+      "projectName": "@opensrp/server-logout",
+      "hash": "10549394055638525691",
+      "startTime": "2026-10-13T05:10:40.601Z",
+      "endTime": "2026-10-13T05:10:40.604Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/rbac:build",
+      "target": "build",
+      "projectName": "@opensrp/rbac",
+      "hash": "380684238619040712",
+      "startTime": "2026-10-13T05:10:40.606Z",
+      "endTime": "2026-10-13T05:10:40.607Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/react-utils:build",
+      "target": "build",
+      "projectName": "@opensrp/react-utils",
+      "hash": "11044745797074913239",
+      "startTime": "2026-10-13T05:10:40.609Z",
+      "endTime": "2026-10-13T05:10:40.615Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/keycloak-service:build",
+      "target": "build",
+      "projectName": "@opensrp/keycloak-service",
+      "hash": "13701675883308004913",
+      "startTime": "2026-10-13T05:10:40.619Z",
+      "endTime": "2026-10-13T05:10:40.638Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/fhir-group-management:build",
+      "target": "build",
+      "projectName": "@opensrp/fhir-group-management",
+      "hash": "865477607922827077",
+      "startTime": "2026-10-13T05:10:40.619Z",
+      "endTime": "2026-10-13T05:10:40.639Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/fhir-resources:build",
+      "target": "build",
+      "projectName": "@opensrp/fhir-resources",
+      "hash": "298516976574325301",
+      "startTime": "2026-10-13T05:10:40.619Z",
+      "endTime": "2026-10-13T05:10:40.639Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/fhir-client:build",
+      "target": "build",
+      "projectName": "@opensrp/fhir-client",
+      "hash": "2511480550636541122",
+      "startTime": "2026-10-13T05:10:40.619Z",
+      "endTime": "2026-10-13T05:10:40.640Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/fhir-care-team:build",
+      "target": "build",
+      "projectName": "@opensrp/fhir-care-team",
+      "hash": "16791684797525670499",
+      "startTime": "2026-10-13T05:10:40.619Z",
+      "endTime": "2026-10-13T05:10:40.641Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/fhir-quest-form:build",
+      "target": "build",
+      "projectName": "@opensrp/fhir-quest-form",
+      "hash": "11689752829694682239",
+      "startTime": "2026-10-13T05:10:40.619Z",
+      "endTime": "2026-10-13T05:10:40.641Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/error-boundary-fallback:build",
+      "target": "build",
+      "projectName": "@opensrp/error-boundary-fallback",
+      "hash": "15151327991726302566",
+      "startTime": "2026-10-13T05:10:40.619Z",
+      "endTime": "2026-10-13T05:10:40.642Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/user-management:build",
+      "target": "build",
+      "projectName": "@opensrp/user-management",
+      "hash": "15803919723038426981",
+      "startTime": "2026-10-13T05:10:40.644Z",
+      "endTime": "2026-10-13T05:10:40.656Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/fhir-location-management:build",
+      "target": "build",
+      "projectName": "@opensrp/fhir-location-management",
+      "hash": "6827862264508055486",
+      "startTime": "2026-10-13T05:10:40.649Z",
+      "endTime": "2026-10-13T05:10:40.657Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/fhir-views:build",
+      "target": "build",
+      "projectName": "@opensrp/fhir-views",
+      "hash": "5114523761476751232",
+      "startTime": "2026-10-13T05:10:40.651Z",
+      "endTime": "2026-10-13T05:10:40.657Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/fhir-import:build",
+      "target": "build",
+      "projectName": "@opensrp/fhir-import",
+      "hash": "12637966434154509362",
+      "startTime": "2026-10-13T05:10:40.652Z",
+      "endTime": "2026-10-13T05:10:40.657Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/fhir-flag:build",
+      "target": "build",
+      "projectName": "@opensrp/fhir-flag",
+      "hash": "6173493357402967829",
+      "startTime": "2026-10-13T05:10:40.653Z",
+      "endTime": "2026-10-13T05:10:40.659Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/fhir-user-sync:build",
+      "target": "build",
+      "projectName": "@opensrp/fhir-user-sync",
+      "hash": "14196022634033124258",
+      "startTime": "2026-10-13T05:10:40.659Z",
+      "endTime": "2026-10-13T05:10:40.669Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/fhir-team-management:build",
+      "target": "build",
+      "projectName": "@opensrp/fhir-team-management",
+      "hash": "14680493265865415791",
+      "startTime": "2026-10-13T05:10:40.664Z",
+      "endTime": "2026-10-13T05:10:40.669Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/fhir-user-management:build",
+      "target": "build",
+      "projectName": "@opensrp/fhir-user-management",
+      "hash": "4383381740930240263",
+      "startTime": "2026-10-13T05:10:40.672Z",
+      "endTime": "2026-10-13T05:10:40.679Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/fhir-healthcare-service:build",
+      "target": "build",
+      "projectName": "@opensrp/fhir-healthcare-service",
+      "hash": "5534418907390092281",
+      "startTime": "2026-10-13T05:10:40.672Z",
+      "endTime": "2026-10-13T05:10:40.679Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@opensrp/fhir-onboarding-wizard:build",
+      "target": "build",
+      "projectName": "@opensrp/fhir-onboarding-wizard",
+      "hash": "12072237195551379999",
+      "startTime": "2026-10-13T05:10:40.619Z",
+      "endTime": "2026-10-13T05:10:46.963Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    }
+  ]
+}

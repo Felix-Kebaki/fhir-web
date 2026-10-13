@@ -1,0 +1,6 @@
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/opensrp-notifications/dist/types/notifications.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/opensrp-notifications/dist/types/index.d.ts
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+Successfully compiled 2 files with Babel (596ms).

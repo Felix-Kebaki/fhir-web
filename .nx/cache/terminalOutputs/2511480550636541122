@@ -1,0 +1,38 @@
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/constants.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/mls.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/helpers/utils.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientsList/utils.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientDetails/ResourceSchema/Patient.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientDetailsOverview/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientsList/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientDetails/ResourceSchema/Condition.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientDetails/ResourceSchema/CarePlan.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientDetails/ResourceSchema/Immunization.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientDetails/ResourceSchema/Encounter.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientDetails/ResourceSchema/Task.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientDetails/utils.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientDetails/PopulatedTableTabs/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientDetails/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/DocumentReference/utils/utils.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/DocumentReference/utils/components.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/DocumentReference/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientDetails/ResourceSchema/DiagnosticReport.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientDetails/ResourceSchema/Goal.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientDetails/ResourceSchema/ImmunizationRecommendation.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientDetails/ResourceSchema/Location.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientDetails/ResourceSchema/Medication.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientDetails/ResourceSchema/MedicationAdministration.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientDetails/ResourceSchema/MedicationRequest.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientDetails/ResourceSchema/MedicationStatement.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientDetails/ResourceSchema/Observation.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientDetails/ResourceSchema/Organization.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientDetails/ResourceSchema/Practitioner.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientDetails/ResourceSchema/Procedure.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientDetails/ResourceSchema/ServiceRequest.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/components/PatientDetails/ResourceSchema/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-client/dist/types/helpers/testUtils.d.ts
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+Successfully compiled 34 files with Babel (3993ms).

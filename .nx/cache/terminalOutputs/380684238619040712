@@ -1,0 +1,12 @@
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/rbac/dist/types/helpers/utils.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/rbac/dist/types/roleDefinition/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/rbac/dist/types/helpers/types.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/rbac/dist/types/constants.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/rbac/dist/types/adapters/keycloakAdapter.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/rbac/dist/types/components/hoc.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/rbac/dist/types/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/rbac/dist/types/mls.d.ts
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+Successfully compiled 9 files with Babel (639ms).

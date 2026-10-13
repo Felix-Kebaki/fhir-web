@@ -1,0 +1,29 @@
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/constants.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/ducks/user.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/mls.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/components/UserList/utils.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/components/UserList/TableActions/utils.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/components/UserList/TableActions/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/components/UserDetails/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/components/UserList/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/ducks/userGroups.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/ducks/userRoles.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/components/UserGroupDetailView/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/components/UserGroupsList/utils.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/components/UserGroupsList/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/components/UserRolesList/utils.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/components/UserRolesList/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/components/CreateEditUserGroup/utils.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/components/CreateEditUserGroup/Form.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/components/CreateEditUserGroup/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/components/forms/UserForm/types.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/components/forms/UserForm/utils.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/components/Credentials/passwordStrengthMeter.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/components/Credentials/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/components/forms/UserForm/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/components/CreateEditUser/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/keycloak-user-management/dist/types/index.d.ts
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+Successfully compiled 25 files with Babel (2886ms).

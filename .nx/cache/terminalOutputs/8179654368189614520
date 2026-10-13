@@ -1,0 +1,19 @@
+[36m
+[1msrc/index.tsx[22m → [1mdist/index.js[22m...[39m
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/i18n/dist/resources.js
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/i18n/dist/types/resources.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/i18n/dist/init.js
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/i18n/dist/types/init.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/i18n/dist/index.js
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/i18n/dist/types/index.d.ts
+[1m[33m(!) Unresolved dependencies[39m[22m
+[90mhttps://rollupjs.org/guide/en/#warning-treating-module-as-external-dependency[39m
+[1mreact-i18next[22m (imported by src/index.tsx, src/init.tsx)
+[1mreact/jsx-runtime[22m (imported by src/init.tsx)
+[1m@opensrp/pkg-config[22m (imported by src/init.tsx)
+[1mi18next[22m (imported by src/init.tsx)
+[1mi18next-browser-languagedetector[22m (imported by src/init.tsx)
+[32mcreated [1mdist/index.js[22m in [1m3.5s[22m[39m
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/i18n/dist/types/resources.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/i18n/dist/types/init.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/i18n/dist/types/index.d.ts

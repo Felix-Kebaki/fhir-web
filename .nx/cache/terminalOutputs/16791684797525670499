@@ -1,0 +1,12 @@
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-care-team/dist/types/constants.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-care-team/dist/types/mls.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-care-team/dist/types/components/ViewDetails/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-care-team/dist/types/components/ListView/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-care-team/dist/types/components/CreateEditCareTeam/utils.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-care-team/dist/types/components/CreateEditCareTeam/Form.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-care-team/dist/types/components/CreateEditCareTeam/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-care-team/dist/types/index.d.ts
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+Successfully compiled 8 files with Babel (3169ms).

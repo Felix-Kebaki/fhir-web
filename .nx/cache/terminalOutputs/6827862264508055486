@@ -1,0 +1,35 @@
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/constants.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/mls.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/LocationUnitList/Table.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/helpers/types.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/helpers/utils.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/ducks/location-tree-state.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/LocationForm/utils.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/RootLocationWizard/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/LocationUnitList/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/LocationTree/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/LocationForm/CustomTreeSelect/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/LocationForm/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/AddEditLocationUnit/base.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/AddEditLocationUnit/core.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/AddEditLocationUnit/eusm.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/AddEditLocationUnit/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/ViewDetails/utils.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/ViewDetails/DetailsTabs/Inventory.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/EditLink/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/ViewDetails/DetailsTabs/ChildLocations.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/ViewDetails/DetailsTabs/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/ViewDetails/LocationPathBreadCrumb/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/ViewDetails/LocationDetails/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/ViewDetails/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/AllLocationListFlat/utils.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/AllLocationListFlat/dataGridFilterRow.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/AllLocationListFlat/base.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/AllLocationListFlat/core.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/AllLocationListFlat/eusm.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/components/AllLocationListFlat/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-location-management/dist/types/index.d.ts
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+Successfully compiled 33 files with Babel (3096ms).

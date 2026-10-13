@@ -1,0 +1,3 @@
+src/components/onboardingWizard/index.tsx(4,23): error TS2307: Cannot find module '../../steps' or its corresponding type declarations.
+src/components/onboardingWizard/index.tsx(20,54): error TS7006: Parameter 's' implicitly has an 'any' type.
+src/index.ts(1,34): error TS2307: Cannot find module './components/OnboardingWizard' or its corresponding type declarations.

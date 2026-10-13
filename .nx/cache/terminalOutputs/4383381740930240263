@@ -1,0 +1,20 @@
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-keycloak-user-management/dist/types/constants.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-keycloak-user-management/dist/types/mls.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-keycloak-user-management/dist/types/components/UserList/Viewdetails/ViewDetailResources/GroupDetailView.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-keycloak-user-management/dist/types/components/UserList/Viewdetails/types.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-keycloak-user-management/dist/types/components/UserList/Viewdetails/ViewDetailResources/PractitionerDetails.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-keycloak-user-management/dist/types/components/UserList/Viewdetails/ViewDetailResources/CareTeamDetails.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-keycloak-user-management/dist/types/components/UserList/Viewdetails/ViewDetailResources/OrganizationDetailsView.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-keycloak-user-management/dist/types/components/UserList/ListView/utils.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-keycloak-user-management/dist/types/components/UserDeleteBtn/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-keycloak-user-management/dist/types/components/UserList/Viewdetails/ViewDetailResources/RoleDetailView.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-keycloak-user-management/dist/types/components/UserList/Viewdetails/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-keycloak-user-management/dist/types/components/CreateEditUser/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-keycloak-user-management/dist/types/components/UserList/ListView/tableColumns.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-keycloak-user-management/dist/types/components/UserList/ViewdetailsOverview/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-keycloak-user-management/dist/types/components/UserList/ListView/index.d.ts
+TSFILE: /home/feizo/Desktop/Nawi-project/fhir-web/packages/fhir-keycloak-user-management/dist/types/index.d.ts
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+Successfully compiled 16 files with Babel (1096ms).
