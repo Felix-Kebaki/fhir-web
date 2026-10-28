@@ -125,7 +125,7 @@ async function findRoles(baseUrl: string, practitionerId: string) {
   return getResourcesFromBundle<IPractitionerRole>(res);
 }
 
-/** gives the practitioner a role in this organization without touching the roles they hold in others */
+/** puts the practitioner in this organization; a practitioner belongs to one, so an existing one is moved */
 async function assignPractitioner(
   baseUrl: string,
   organization: IOrganization,
@@ -139,14 +139,13 @@ async function assignPractitioner(
 
   const organizationRef = { reference: orgRef, display: organization.name };
 
-  // a role with no organization yet (the one the user form creates) is claimed first
-  const unassigned = roles.find((r) => !r.organization?.reference);
-  if (unassigned) {
-    await roleService.update({ ...unassigned, organization: organizationRef });
+  const target = roles.find((r) => !r.organization?.reference) ?? roles[0];
+  if (target) {
+    await roleService.update({ ...target, organization: organizationRef });
     return;
   }
 
-  // otherwise the practitioner already belongs to other organizations: add a role instead of moving one
+  // the practitioner has no practitionerRole at all yet: create one
   const [practitioner] = await fetchByIds<IPractitioner>(baseUrl, 'Practitioner', [practitionerId]);
   const secondary = practitioner.identifier?.find((i) => i.use === 'secondary');
   const id = v4();
@@ -162,7 +161,6 @@ async function assignPractitioner(
       ),
     },
     organization: organizationRef,
-    ...(roles[0]?.code ? { code: roles[0].code } : {}),
   } as IPractitionerRole);
 }
 
@@ -345,14 +343,35 @@ async function submitCareTeams({ fhirBaseURL }: SubmitWizardArgs, idMap: IdMap) 
   }
 }
 
-/** the same rules as when a draft is added, run once more before anything is created */
+/** checked before anything is created, so a bad draft never leaves a half-finished setup */
 function validateDrafts() {
-  (Object.keys(duplicateChecks) as StepKey[]).forEach((step) => {
-    const drafts = readDrafts<Record<string, unknown>>(step);
-    drafts.forEach((draft, i) => {
-      const problem = duplicateChecks[step](draft, drafts, i);
-      if (problem) throw new Error(problem);
-    });
+  const idsOf = (step: StepKey) =>
+    new Set(readDrafts<{ draftId: string }>(step).map((draft) => draft.draftId));
+  const userIds = idsOf(StepKey.USERS);
+  const organizationIds = idsOf(StepKey.ORGANIZATION);
+
+  const dangling = (refs: string[] | undefined, existing: Set<string>) =>
+    (refs ?? []).some(
+      (ref) => ref.startsWith(DRAFT_PREFIX) && !existing.has(ref.slice(DRAFT_PREFIX.length))
+    );
+
+  readDrafts<Draft<OrganizationFormFields>>(StepKey.ORGANIZATION).forEach((org) => {
+    if (dangling(org.members, userIds)) {
+      throw new Error(
+        `The organization "${org.name}" includes a drafted user that was removed. Select its practitioners again.`
+      );
+    }
+  });
+
+  readDrafts<Draft<CareTeamFormFields>>(StepKey.CARE_TEAM).forEach((team) => {
+    if (
+      dangling(team.practitionerParticipants, userIds) ||
+      dangling(team.managingOrganizations, organizationIds)
+    ) {
+      throw new Error(
+        `The care team "${team.name}" includes a drafted user or organization that was removed. Select them again.`
+      );
+    }
   });
 }
 

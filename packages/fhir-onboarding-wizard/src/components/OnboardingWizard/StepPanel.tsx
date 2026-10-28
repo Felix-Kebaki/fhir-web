@@ -15,6 +15,11 @@ interface StepPanelProps {
   submitting: boolean;
 }
 
+const membersOf = (draft: unknown): string[] => {
+  const members = (draft as { members?: unknown }).members;
+  return Array.isArray(members) ? (members as string[]) : [];
+};
+
 export const StepPanel: React.FC<StepPanelProps> = ({
   stepConfig,
   commonProps,
@@ -28,18 +33,36 @@ export const StepPanel: React.FC<StepPanelProps> = ({
   const [editIndex, setEditIndex] = useState<number | undefined>(undefined);
   const StepComponent = stepConfig.component;
 
-const handleAddToDraft = (values: unknown): boolean => {
-  const problem = stepConfig.findDuplicate?.(values as Record<string, unknown>, drafts, editIndex);
-  if (problem) {
-    message.error(problem);
-    return false; // tells the form to keep what was typed
-  }
-  const existingId =
-    editIndex !== undefined ? (drafts[editIndex] as { draftId?: string })?.draftId : undefined;
-  addDraft({ ...(values as object), draftId: existingId ?? v4() }, editIndex);
-  setEditIndex(undefined);
-  return true;
-};
+  // takes practitioners out of the other draft organizations (the draft being edited is left alone)
+  const moveMembersFromOtherDrafts = (members: string[]) => {
+    drafts.forEach((draft, index) => {
+      if (index === editIndex) return;
+      const current = membersOf(draft);
+      if (current.some((member) => members.includes(member))) {
+        addDraft(
+          { ...(draft as object), members: current.filter((member) => !members.includes(member)) },
+          index
+        );
+      }
+    });
+  };
+
+  const handleAddToDraft = (values: unknown): boolean => {
+    const problem = stepConfig.findDuplicate?.(
+      values as Record<string, unknown>,
+      drafts,
+      editIndex
+    );
+    if (problem) {
+      message.error(problem);
+      return false; // tells the form to keep what was typed
+    }
+    const existingId =
+      editIndex !== undefined ? (drafts[editIndex] as { draftId?: string })?.draftId : undefined;
+    addDraft({ ...(values as object), draftId: existingId ?? v4() }, editIndex);
+    setEditIndex(undefined);
+    return true;
+  };
 
   return (
     <div>
@@ -61,6 +84,8 @@ const handleAddToDraft = (values: unknown): boolean => {
         initialValues={editIndex !== undefined ? drafts[editIndex] : undefined}
         onSubmit={handleAddToDraft}
         {...commonProps}
+        currentDrafts={drafts}
+        moveMembersFromOtherDrafts={moveMembersFromOtherDrafts}
       />
 
       <DraftList

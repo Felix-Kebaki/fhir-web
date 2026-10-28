@@ -50,7 +50,7 @@ interface OrganizationFormProps {
   existingPractitionerRoles: IPractitionerRole[];
   allPractitionerRoles: IPractitionerRole[];
   configuredPractAssignmentStrategy?: PractToOrgAssignmentStrategy;
-  onDraftSubmit?: (values: OrganizationFormFields) => boolean | void;
+  onDraftSubmit?: (values: OrganizationFormFields) => boolean | void | Promise<boolean | void>;
   draftPractitionerOptions?: { label: string; value: string }[];
 }
 
@@ -153,9 +153,10 @@ const OrganizationForm = (props: OrganizationFormProps) => {
     <Form
       {...formItemLayout}
       form={form}
-      onFinish={(values) => {
+      onFinish={async (values) => {
         if (onDraftSubmit) {
-          if (onDraftSubmit(values) !== false) form.resetFields(); // a rejected draft keeps what was typed
+          const accepted = await onDraftSubmit(values);
+          if (accepted !== false) form.resetFields(); // a rejected draft keeps what was typed
           return;
         }
         mutate(values);
